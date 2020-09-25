@@ -17,7 +17,7 @@
             delay = setDefault(config.delay, 0),
             callback = config.callback || function() {},
             cookieExpire = setDefaultCookieExpire(config.cookieExpire) || '',
-            cookieDoSeptembern = config.cookieDoSeptembern ? ';doSeptembern=' + config.cookieDoSeptembern : '',
+            cookieDoOktobern = config.cookieDoOktobern ? ';doOktobern=' + config.cookieDoOktobern : '',
             cookieName = config.cookieName ? config.cookieName : 'viewedOuibounceModal',
             sitewide = config.sitewide === true ? ';path=/' : '',
             _delayTimer = null,
@@ -107,13 +107,13 @@
             if (options.sitewide === true) {
                 sitewide = ';path=/';
             }
-            if (typeof options.cookieDoSeptembern !== 'undefined') {
-                cookieDoSeptembern = ';doSeptembern=' + options.cookieDoSeptembern;
+            if (typeof options.cookieDoOktobern !== 'undefined') {
+                cookieDoOktobern = ';doOktobern=' + options.cookieDoOktobern;
             }
             if (typeof options.cookieName !== 'undefined') {
                 cookieName = options.cookieName;
             }
-            document.cookie = cookieName + '=true' + cookieExpire + cookieDoSeptembern + sitewide;
+            document.cookie = cookieName + '=true' + cookieExpire + cookieDoOktobern + sitewide;
             _html.removeEventListener('mouseleave', handleMouseleave);
             _html.removeEventListener('mouseenter', handleMouseenter);
             _html.removeEventListener('keydown', handleKeydown);
@@ -3040,12 +3040,12 @@
                         return e && e.abort(b), A(0, b), this
                     }
                 };
-            if (s.promise(y), o.url = ((b || o.url || tb.href) + "").replace(Hb, tb.protocol + "//"), o.type = c.method || c.type || o.method || o.type, o.dataTypes = (o.dataType || "*").toLowerCase().match(L) || [""], null == o.crossDoSeptembern) {
+            if (s.promise(y), o.url = ((b || o.url || tb.href) + "").replace(Hb, tb.protocol + "//"), o.type = c.method || c.type || o.method || o.type, o.dataTypes = (o.dataType || "*").toLowerCase().match(L) || [""], null == o.crossDoOktobern) {
                 j = d.createElement("a");
                 try {
-                    j.href = o.url, j.href = j.href, o.crossDoSeptembern = Lb.protocol + "//" + Lb.host != j.protocol + "//" + j.host
+                    j.href = o.url, j.href = j.href, o.crossDoOktobern = Lb.protocol + "//" + Lb.host != j.protocol + "//" + j.host
                 } catch (z) {
-                    o.crossDoSeptembern = !0
+                    o.crossDoOktobern = !0
                 }
             }
             if (o.data && o.processData && "string" != typeof o.data && (o.data = r.param(o.data, o.traditional)), Nb(Ib, o, c, y), k) return y;
@@ -3142,12 +3142,12 @@
         Sb = r.ajaxSettings.xhr();
     o.cors = !!Sb && "withCredentials" in Sb, o.ajax = Sb = !!Sb, r.ajaxTransport(function(b) {
         var c, d;
-        if (o.cors || Sb && !b.crossDoSeptembern) return {
+        if (o.cors || Sb && !b.crossDoOktobern) return {
             send: function(e, f) {
                 var g, h = b.xhr();
                 if (h.open(b.type, b.url, b.async, b.username, b.password), b.xhrFields)
                     for (g in b.xhrFields) h[g] = b.xhrFields[g];
-                b.mimeType && h.overrideMimeType && h.overrideMimeType(b.mimeType), b.crossDoSeptembern || e["X-Requested-With"] || (e["X-Requested-With"] = "XMLHttpRequest");
+                b.mimeType && h.overrideMimeType && h.overrideMimeType(b.mimeType), b.crossDoOktobern || e["X-Requested-With"] || (e["X-Requested-With"] = "XMLHttpRequest");
                 for (g in e) h.setRequestHeader(g, e[g]);
                 c = function(a) {
                     return function() {
@@ -3173,7 +3173,7 @@
             }
         }
     }), r.ajaxPrefilter(function(a) {
-        a.crossDoSeptembern && (a.contents.script = !1)
+        a.crossDoOktobern && (a.contents.script = !1)
     }), r.ajaxSetup({
         accepts: {
             script: "text/javascript, application/javascript, application/ecmascript, application/x-ecmascript"
@@ -3187,9 +3187,9 @@
             }
         }
     }), r.ajaxPrefilter("script", function(a) {
-        void 0 === a.cache && (a.cache = !1), a.crossDoSeptembern && (a.type = "GET")
+        void 0 === a.cache && (a.cache = !1), a.crossDoOktobern && (a.type = "GET")
     }), r.ajaxTransport("script", function(a) {
-        if (a.crossDoSeptembern) {
+        if (a.crossDoOktobern) {
             var b, c;
             return {
                 send: function(e, f) {
@@ -4553,7 +4553,7 @@ if ("undefined" == typeof jQuery) throw new Error("Bootstrap's JavaScript requir
         }
 
         if (options) {
-            /* Septemberntain BC for a couple of versions. */
+            /* Oktoberntain BC for a couple of versions. */
             if (undefined !== options.failurelimit) {
                 options.failure_limit = options.failurelimit;
                 delete options.failurelimit;
@@ -4748,7 +4748,7 @@ if ("undefined" == typeof jQuery) throw new Error("Bootstrap's JavaScript requir
                 threshold: 0
             });
         },
-        /* Septemberntain BC for couple of versions. */
+        /* Oktoberntain BC for couple of versions. */
         "above-the-fold": function(a) {
             return !$.belowthefold(a, {
                 threshold: 0
@@ -4806,7 +4806,7 @@ if ("undefined" == typeof jQuery) throw new Error("Bootstrap's JavaScript requir
                         k = i.expires = new Date;
                     k.setDate(k.getDate() + j)
                 }
-                return document.cookie = [b(e), "=", d(g), i.expires ? "; expires=" + i.expires.toUTCString() : "", i.path ? "; path=" + i.path : "", i.doSeptembern ? "; doSeptembern=" + i.doSeptembern : "", i.secure ? "; secure" : ""].join("")
+                return document.cookie = [b(e), "=", d(g), i.expires ? "; expires=" + i.expires.toUTCString() : "", i.path ? "; path=" + i.path : "", i.doOktobern ? "; doOktobern=" + i.doOktobern : "", i.secure ? "; secure" : ""].join("")
             }
             for (var l = e ? void 0 : {}, m = document.cookie ? document.cookie.split("; ") : [], n = 0, o = m.length; o > n; n++) {
                 var p = m[n].split("="),
@@ -4944,7 +4944,7 @@ $(function() {
                     var clip = new ZeroClipboard(document.getElementById("copy-code"), {
                         moviePath: "/core/3rd-party/ZeroClipboard/ZeroClipboard.swf",
                         allowScriptAccess: "always",
-                        trustedDoSeptemberns: location.hostname
+                        trustedDoOktoberns: location.hostname
                     });
                     clip.on('noflash', function(client, args) {
                         document.getElementById('hidden-code').style.display = 'block';
@@ -5132,7 +5132,7 @@ function debounce(func, wait, immediate) {
 
 function SkyscraperPosition() {
     if ($('.advertise-skyscraper').length > 0) {
-        var rt = ($('.Septembern-wrapper > .container:first').offset().left + $('.Septembern-wrapper > .container:first').outerWidth());
+        var rt = ($('.Oktobern-wrapper > .container:first').offset().left + $('.Oktobern-wrapper > .container:first').outerWidth());
         $('.advertise-skyscraper').css({
             'position': 'fixed',
             'top': '60px',

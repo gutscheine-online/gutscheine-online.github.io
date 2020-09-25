@@ -10,7 +10,7 @@ body {
     margin: 0
 }
 
-article,aside,details,figcaption,figure,footer,header,hgroup,Septembern,menu,nav,section,summary {
+article,aside,details,figcaption,figure,footer,header,hgroup,Oktobern,menu,nav,section,summary {
     display: block
 }
 
@@ -181,7 +181,7 @@ td,th {
     padding: 0
 }
 
-/*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/Septembern.css */
+/*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/Oktobern.css */
 @media print {
     *,*:before,*:after {
         background: transparent !important;
@@ -339,7 +339,7 @@ body {
     background: #5d164e
 }
 
-#mc_embed_signup-2 #mc_embed_signup_scroll-2 .eSeptemberl {
+#mc_embed_signup-2 #mc_embed_signup_scroll-2 .eOktoberl {
     flex: 100;
     padding: 0 10px;
     height: 40px;
@@ -347,7 +347,7 @@ body {
     color: #565656
 }
 
-#mc_embed_signup-2 #mc_embed_signup_scroll-2 .eSeptemberl:focus {
+#mc_embed_signup-2 #mc_embed_signup_scroll-2 .eOktoberl:focus {
     outline: none
 }
 
