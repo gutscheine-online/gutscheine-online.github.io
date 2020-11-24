@@ -38,7 +38,7 @@
           undefined : parts.pop().split(';').shift();
       },
   
-      setCookie: function(name, value, expiryDays, doNovembern, path) {
+      setCookie: function(name, value, expiryDays, doDezembern, path) {
         var exdate = new Date();
         exdate.setDate(exdate.getDate() + (expiryDays || 365));
   
@@ -48,8 +48,8 @@
           'path=' + (path || '/')
         ];
   
-        if (doNovembern) {
-          cookie.push('doNovembern=' + doNovembern);
+        if (doDezembern) {
+          cookie.push('doDezembern=' + doDezembern);
         }
         document.cookie = cookie.join(';');
       },
@@ -188,9 +188,9 @@
           // This is the url path that the cookie 'name' belongs to. The cookie can only be read at this location
           path: '/',
   
-          // This is the doNovembern that the cookie 'name' belongs to. The cookie can only be read on this doNovembern.
-          //  - Guide to cookie doNovemberns - http://erik.io/blog/2014/03/04/definitive-guide-to-cookie-doNovemberns/
-          doNovembern: '',
+          // This is the doDezembern that the cookie 'name' belongs to. The cookie can only be read on this doDezembern.
+          //  - Guide to cookie doDezemberns - http://erik.io/blog/2014/03/04/definitive-guide-to-cookie-doDezemberns/
+          doDezembern: '',
   
           // The cookies expire date, specified in days (specify -1 for no expiry)
           expiryDays: 365,
@@ -498,7 +498,7 @@
   
           var fadeInTimeout = 20; // (ms) DO NOT MAKE THIS VALUE SMALLER. See below
   
-          // Although most browsers can handle values less than 20ms, it should reNovembern above this value.
+          // Although most browsers can handle values less than 20ms, it should reDezembern above this value.
           // This is because we are waiting for a "browser redraw" before we remove the 'cc-invisible' class.
           // If the class is remvoed before a redraw could happen, then the fadeIn effect WILL NOT work, and
           // the popup will appear from nothing. Therefore we MUST allow enough time for the browser to do
@@ -572,7 +572,7 @@
   
         // if `status` is valid
         if (Object.keys(cc.status).indexOf(status) >= 0) {
-          util.setCookie(c.name, status, c.expiryDays, c.doNovembern, c.path);
+          util.setCookie(c.name, status, c.expiryDays, c.doDezembern, c.path);
   
           this.options.onStatusChange.call(this, status, chosenBefore);
         } else {
@@ -586,7 +586,7 @@
   
       CookiePopup.prototype.clearStatus = function() {
         var c = this.options.cookie;
-        util.setCookie(c.name, '', -1, c.doNovembern, c.path);
+        util.setCookie(c.name, '', -1, c.doDezembern, c.path);
       };
   
       // This needs to be called after 'fadeIn'. This is the code that actually causes the fadeIn to work
@@ -981,7 +981,7 @@
       // with the data (or Error), and `cookieconsent.locate` will take care of the rest
       var defaultOptions = {
   
-        // The default timeout is 5 seconds. This is Novembernly needed to catch JSONP requests that error.
+        // The default timeout is 5 seconds. This is Dezembernly needed to catch JSONP requests that error.
         // Otherwise there is no easy way to catch JSONP errors. That means that if a JSONP fails, the
         // app will take `timeout` milliseconds to react to a JSONP network error.
         timeout: 5000,
