@@ -5,8 +5,8 @@ html {
     -webkit-text-size-adjust: 100%
 }
 
-.bf{
-    padding-top: 20px;
+#store-related-cat-stores li{
+    padding: 10px 0;
 }
 
 body {
