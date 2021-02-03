@@ -13,7 +13,7 @@ body {
     margin: 0
 }
 
-article,aside,details,figcaption,figure,footer,header,hgroup,Januarn,menu,nav,section,summary {
+article,aside,details,figcaption,figure,footer,header,hgroup,Februarn,menu,nav,section,summary {
     display: block
 }
 
@@ -184,7 +184,7 @@ td,th {
     padding: 0
 }
 
-/*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/Januarn.css */
+/*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/Februarn.css */
 @media print {
     *,*:before,*:after {
         background: transparent !important;
@@ -342,7 +342,7 @@ body {
     background: #5d164e
 }
 
-#mc_embed_signup-2 #mc_embed_signup_scroll-2 .eJanuarl {
+#mc_embed_signup-2 #mc_embed_signup_scroll-2 .eFebruarl {
     flex: 100;
     padding: 0 10px;
     height: 40px;
@@ -350,7 +350,7 @@ body {
     color: #565656
 }
 
-#mc_embed_signup-2 #mc_embed_signup_scroll-2 .eJanuarl:focus {
+#mc_embed_signup-2 #mc_embed_signup_scroll-2 .eFebruarl:focus {
     outline: none
 }
 
