@@ -13,7 +13,7 @@ body {
     margin: 0
 }
 
-article,aside,details,figcaption,figure,footer,header,hgroup,Apriln,menu,nav,section,summary {
+article,aside,details,figcaption,figure,footer,header,hgroup,Main,menu,nav,section,summary {
     display: block
 }
 
@@ -184,7 +184,7 @@ td,th {
     padding: 0
 }
 
-/*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/Apriln.css */
+/*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/Main.css */
 @media print {
     *,*:before,*:after {
         background: transparent !important;
@@ -342,7 +342,7 @@ body {
     background: #5d164e
 }
 
-#mc_embed_signup-2 #mc_embed_signup_scroll-2 .eAprill {
+#mc_embed_signup-2 #mc_embed_signup_scroll-2 .eMail {
     flex: 100;
     padding: 0 10px;
     height: 40px;
@@ -350,7 +350,7 @@ body {
     color: #565656
 }
 
-#mc_embed_signup-2 #mc_embed_signup_scroll-2 .eAprill:focus {
+#mc_embed_signup-2 #mc_embed_signup_scroll-2 .eMail:focus {
     outline: none
 }
 
